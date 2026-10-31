@@ -1,0 +1,24 @@
+# 원본 가상머신과 배포 압축 파일
+*.vdi
+*.vbox
+*.vbox-prev
+*.ova
+*.ovf
+*.iso
+*.zip
+Logs/
+
+# 실제 자격 증명, 실습 결과와 개인 키
+.env
+.env.*
+!.env.example
+user.txt
+root.txt
+*.pem
+*.key
+
+# 로컬 임시 산출물
+__pycache__/
+*.pyc
+.venv/
+tmp/

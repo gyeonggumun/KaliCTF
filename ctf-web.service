@@ -1,0 +1,13 @@
+[Unit]
+Description=CTF Flask Web Service
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/internal_api
+ExecStart=/usr/bin/python3 /var/www/internal_api/wsgi.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

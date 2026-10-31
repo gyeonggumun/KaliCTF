@@ -1,0 +1,49 @@
+{
+  "method": "Read-only VDI / LVM / ext4 inspection; guest not booted",
+  "files": [
+    {
+      "source_path": "/var/www/internal_api/wsgi.py",
+      "repository_path": "reference/web/wsgi.py",
+      "sha256": "c72f53e6b80d958984a311782cc4fb9eaa183c375a008cb2149c2a593dfc71a6",
+      "size_bytes": 5040,
+      "mode": "0o644"
+    },
+    {
+      "source_path": "/etc/systemd/system/ctf-web.service",
+      "repository_path": "reference/systemd/ctf-web.service",
+      "sha256": "edfb5a2534143214fcec18a2dcbfb31ca3c3ef635f477564a9035856597f4763",
+      "size_bytes": 248,
+      "mode": "0o644"
+    },
+    {
+      "source_path": "/etc/systemd/system/ctf-fake-ports.service",
+      "repository_path": "reference/systemd/ctf-fake-ports.service",
+      "sha256": "407a9d76448a97f02578ce5176c73d835031f2c372ebc40e49668e0f7c24530b",
+      "size_bytes": 229,
+      "mode": "0o644"
+    },
+    {
+      "source_path": "/etc/iptables/rules.v4",
+      "repository_path": "reference/network/rules.v4",
+      "sha256": "98a85a5fa321337f19d7fa4fc3da1f7ff4f6c96a8464843a2d791de0f5938582",
+      "size_bytes": 882,
+      "mode": "0o640"
+    },
+    {
+      "source_path": "/usr/local/bin/netcheck",
+      "repository_path": null,
+      "sha256": "d7b5673e3f4776e7063414ef533a06d2c409eed3d92971b75b9af806faf0c98b",
+      "size_bytes": 16096,
+      "mode": "0o4755",
+      "uid": 0,
+      "gid": 0,
+      "observed_strings": [
+        "system",
+        "setuid",
+        "setgid",
+        "curl -I -s https://google.com"
+      ],
+      "note": "Static inode, symbol and string inspection only; binary not published."
+    }
+  ]
+}

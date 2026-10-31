@@ -1,0 +1,11 @@
+[Unit]
+Description=CTF Fake Ports Listener
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'ncat -l -k -p 21 & ncat -l -k -p 3306 & ncat -l -k -p 8080 & wait'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
